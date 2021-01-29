@@ -1,0 +1,19 @@
+<h1> Sign Up </h1>
+
+<%= form_for @user do |f| %>
+<%= f.label :name %> <br>
+<%= f.text_field :name %> <br>
+<%= f.label :password %> <br>
+<%= f.text_field :password %> <br>
+<%= f.label :nausea %> <br>
+<%= f.number_field :nausea %> <br>
+<%= f.label :happiness %> <br>
+<%= f.number_field :happiness %> <br>
+<%= f.label :height %> <br>
+<%= f.number_field :height %> <br>
+<%= f.label :tickets %> <br>
+<%= f.number_field :tickets %> <br> <br>
+<%= f.label :admin, "Are you the park owner?" %> <br>
+<%= f.check_box :admin, {class:"form-check-input", type:"checkbox"}, true, false  %> <br> <br>
+<%= f.submit  %> <br>
+<% end %>

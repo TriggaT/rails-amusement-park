@@ -1,0 +1,26 @@
+<% if flash[:message] %>
+  <div class="center alert">
+    <p><%= flash[:message] %></p>
+  </div>
+<% end %>
+
+<h1> <%= current_user.name %> </h1> <br>
+<% if current_user.admin  %>
+<h3> ADMIN </h3>
+
+<% else %>
+
+
+<h3> Tickets: <%= current_user.tickets %> </h3> <br>
+<h3> Nausea: <%= current_user.nausea %> </h3> <br>
+<h3> Happiness: <%= current_user.happiness %> </h3> <br>
+<h3> Height: <%= current_user.height %> inches </h3> <br>
+
+<h3> Mood: <%= current_user.mood %> </h3> <br>
+
+
+<% end %>
+
+<%= link_to "See attractions", attractions_path %> <br>
+<%= link_to "Log Out", logout_path, method: :delete  %>
+  
